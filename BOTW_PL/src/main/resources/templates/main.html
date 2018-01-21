@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="common/header :: header"> </head>
+  <body>
+  <div class="container">
+     <div th:replace="${content} :: content"></div>
+
+  </div>
+<div lang="en" th:replace="common/footer :: footer"> </div>
+</body>
+</html>
