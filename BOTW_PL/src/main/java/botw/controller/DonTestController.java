@@ -18,9 +18,11 @@ public class DonTestController {
 		Long sysTime = System.currentTimeMillis();
 		log.info("The current timestamp is [] right now", sysTime);
 		
-		model.addAttribute("sysTime",sysTime);
+		model.addAttribute("sysTime", sysTime);
+		model.addAttribute("content", "donHelloWorld");
 		
-		return "donHelloWorld";
+		
+		return "main";
 	}
 	
 }
