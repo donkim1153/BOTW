@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: h2-webconsole
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: don.h.kim
+Implementation-Vendor-Id: botw.bl
+Build-Jdk: 1.8.0_131
+Implementation-URL: http://projects.spring.io/spring-boot/h2-webconsol
+ e/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
