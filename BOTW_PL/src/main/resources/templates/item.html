@@ -1,25 +1,42 @@
-
 <head th:fragment="content">
-	<head>
-	    <title>Getting Started: Handling Form Submission</title>
-	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	</head>
-	<body>
-		<div class="container">
-		    <form action="#" th:action="@{/item}" th:object="${searchItem}" method="post">
-		    	ID: <input type="text" th:field="*{id}" />
-		        Material: <input type="text" th:field="*{itemName}" />
-		        Description: <input type="text" th:field="*{itemDescription}" />
-		        <!--<p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p> -->
-		    </form>
-		    	<ul>
-		    		<li th:each="item : ${items}">
-		    			<p th:text="${item.id}"></p>
-		    			<p th:text="${item.itemName}"></p>
-		    			<p th:text="${item.itemDescription}"></p>
-		    			<p th:text="${item.effect}"></p>
-		    		</li>
-		    	</ul>
-	    </div>
-	</body>
+<head>
+<title>Getting Started: Handling Form Submission</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+	<div class="container">
+		<form class="form-inline" action="#" th:action="@{/item}" th:object="${searchItem}" method="post">			
+			<label for="itemName" class="col-form-label" style="padding-right: 8px">Item Name:</label> 
+			<input class="form-control mr-sm-2" type="search" th:field="*{itemName}" /> 
+			
+			<label for="itemDecription" class="col-form-label"  style="padding-right: 8px">Description:</label> 
+			<input class="form-control mr-sm-2" type="search" th:field="*{itemDescription}" /> 
+			
+			<label for="itemEffect" class="col-form-label" style="padding-right: 8px">Effect:</label> 
+			<input class="form-control mr-sm-2" type="search" th:field="*{effect}" />
+		</form>
+	</div>
+	
+		<div class="container" style="padding-top: 3%">
+			<table class="table">
+				<thead>
+					<tr>
+						<th></th>
+						<th>Item Name</th>
+						<th>Description</th>
+						<th>Effects</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="item : ${items}">
+						<td><img th:src="@{/img/food/} + ${item.imageUrl}"/></td>
+						<td th:text="${item.itemName}"></td>
+						<td th:text="${item.itemDescription}"></td>
+						<td th:text="${item.effect}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>	
+</body>
 </head>
