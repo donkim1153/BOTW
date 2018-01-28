@@ -5,16 +5,18 @@ public class Item {
 	private String itemName;
 	private String itemDescription;
 	private String effect;
+	private String imageUrl;
 	
 	public Item() {
 		
 	}
 	
-	public Item(int id, String name, String description, String effect) {
+	public Item(int id, String name, String description, String effect, String imageUrl) {
 		this.id = id;
 		itemName = name;
 		itemDescription = description;
 		this.effect = effect;
+		this.imageUrl = imageUrl;
 	}
 	
 	public int getId() {
@@ -47,5 +49,13 @@ public class Item {
 
 	public void setEffect(String effect) {
 		this.effect = effect;
+	}
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 }
