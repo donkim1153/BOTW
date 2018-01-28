@@ -15,7 +15,7 @@ import botw.generator.ItemGenerator;
 @Controller
 public class ItemController {
 	//for logging purposes
-	Logger log = LoggerFactory.getLogger(GreetingController.class);
+	Logger log = LoggerFactory.getLogger(ItemController.class);
 	//makes a get request when you use the url/item
 	@RequestMapping(value = "/item", method = RequestMethod.GET)
 	public String itemForm(Model model) {
